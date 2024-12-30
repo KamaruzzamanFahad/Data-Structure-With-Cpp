@@ -33,6 +33,29 @@ void printBackward(Node* tail){
     cout << endl;
 }
 
+void insertHead(Node* &head, int val){
+    Node* newNode = new Node(val);
+
+    newNode->next = head;
+    head->prev = newNode;
+    head = newNode;
+
+}
+
+
+void insertTail(Node* &head, Node* &tail, int val){
+    Node* newNode = new Node(val);
+    if(head == NULL){
+        head = newNode;
+        tail = newNode;
+        return;
+    }
+    tail->next = newNode;
+    newNode->prev = tail;
+    tail = newNode;
+
+}
+
 int main(){
     Node* head = new Node(10);
     Node* a = new Node(20);
@@ -42,6 +65,9 @@ int main(){
     a->prev = head;
     a->next = tail;
     tail->prev = a;
+
+    insertHead(head, 05);
+    insertTail(head, tail, 40);
 
     printForword(head);
     printBackward(tail);
