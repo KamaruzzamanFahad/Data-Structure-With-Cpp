@@ -16,6 +16,7 @@ public:
     }
 };
 
+
 void insert(int val, Node *&head, Node *&tail)
 {
     Node *NewNode = new Node(val);
@@ -32,16 +33,15 @@ void insert(int val, Node *&head, Node *&tail)
     tail = NewNode;
 };
 
-void palindrom(Node *&head, Node *&tail)
+void palindrom(Node *&head, Node *tail)
 {
-    int idx = 0;
+    int idx;
     Node *temp = head;
     while (temp != NULL)
     {
         idx++;
-        temp = temp->next;
     }
-    for (int i = 0; i < idx / 2; i++)
+    for (int i = 0; i > idx / 2; i++)
     {
         if (head->val != tail->val)
         {
