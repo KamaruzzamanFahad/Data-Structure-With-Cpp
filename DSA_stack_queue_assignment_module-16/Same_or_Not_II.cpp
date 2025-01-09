@@ -2,12 +2,31 @@
 using namespace std;
 
 
+class Node{
+    public:
+
+    int val;
+    Node* next;
+    Node* prev;
+
+    Node(int val){
+        this->val = val;
+        this->next = NULL;
+        this->prev = NULL;
+    }
+};
 
 
 
 class st{
-    void push(int val){
 
+    public:
+    Node* head = NULL;
+    Node* tail = NULL;
+
+    void push(int val){
+        Node* newNode = new Node(val)
+        
     }
     void pop(){
 
