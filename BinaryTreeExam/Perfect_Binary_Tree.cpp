@@ -47,6 +47,7 @@ Node *LavelInput()
 
 
 int totalNode =0;
+
 int sumWithoutLeaf(Node *root)
 {
     if (root == NULL)
